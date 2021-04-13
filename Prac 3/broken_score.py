@@ -1,12 +1,12 @@
 """
-CP1404/CP5632 - Practical
-Broken program to determine score status
+CP1404 - Practical 2
 """
 
 def main():
     score = float(input("Enter score: "))
     grade = get_grade(score)
     print(grade)
+
 
 def get_grade(score):
     if score < 0 or score > 100:
@@ -20,4 +20,5 @@ def get_grade(score):
             grade = "Bad"
     return grade
 
-main()
+if __name__ == '__main__':
+    main()

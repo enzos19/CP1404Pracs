@@ -1,27 +1,26 @@
 """
-CP1404/CP5632 - Practical
-Password checker "skeleton" code to help you get started
+CP1404 - Practical 2
 """
 
 def main():
     symbol = "*"
     password = get_password()
-    while not is_valid_password(password):
+    while not isvalid_password(password):
         print("Invalid password!")
         password = get_password()
-    print("Your {}-character password is valid: {}".format(len(password),password))
+    print("Your pasword {}-is a valid password ".format(password))
 
 def get_password():
-    print("Please enter a valid password")
+    print("Please enter your password")
     print("Your password must contain:")
-    print("\t1 or more uppercase characters")
-    print("\t1 or more lowercase characters")
-    print("\t1 or more special characters")
-    print("\t1 or more numbers")
-    password = input("> ")
+    print("\tone or more uppercase characters")
+    print("\tone or more lowercase characters")
+    print("\tone or more special characters")
+    print("\tone or more numbers")
+    password = input(":")
     return password
 
-def is_valid_password(password):
+def isvalid_password(password):
     valid_password = False
     count_lower = 0
     count_upper = 0
@@ -42,4 +41,5 @@ def is_valid_password(password):
             valid_password = True
     return valid_password
 
-main()
+if __name__ == '__main__':
+    main()
