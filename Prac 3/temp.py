@@ -1,14 +1,13 @@
 """
-CP1404/CP5632 - Practical
-Pseudocode for temperature conversion
+CP1404 - Practical 2
 """
 
 def main():
-    MENU = """C - Convert Celsius to Fahrenheit
+    menu  = """C - Convert Celsius to Fahrenheit
 F - Convert Fahrenheit to Celsius
 Q - Quit"""
-    print(MENU)
-    choice = input(">>> ").upper()
+    print(menu)
+    choice = input("====").upper()
     while choice != "Q":
         if choice == "C":
             fahrenheit = convert_fahrenheit()
@@ -18,8 +17,8 @@ Q - Quit"""
             print("Result: {:.2f} F".format(celsius))
         else:
             print("Invalid option")
-        print(MENU)
-        choice = input(">>> ").upper()
+        print(menu)
+        choice = input("=== ").upper()
     print("Thank you.")
 
 def convert_fahrenheit():
@@ -32,4 +31,5 @@ def convert_celsius():
     celsius = 5 / 9 * (fahrenheit - 32)
     return celsius
 
-main()
+if __name__ == '__main__':
+    main()
